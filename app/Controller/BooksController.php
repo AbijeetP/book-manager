@@ -48,5 +48,16 @@ class BooksController extends AppController {
 		
 		$this->set(compact('authors','genres'));
 	}
+
+	public function delete($id=null) {
+		if ($this->request->is('get')) {
+			throw new MethodNotAllowedException();
+		}
+		if($this->Book->delete($id)) {
+			$this->Session->setFlash('Book was successfully deleted.');
+			return $this->redirect(array('action' => 'index'));
+		}
+		$this->Session->setFlash('There was an error while deleting the book.');
+	}
 }
 ?>

@@ -16,7 +16,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+$cakeDescription = __d('cake_dev', 'Book Manager : A small application built using CakePHP');
 ?>
 <!DOCTYPE html>
 <html>
@@ -56,6 +56,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			?>
 		</div>
 	</div>
-	<?php echo $this->element('sql_dump'); ?>
+	<?php //echo $this->element('sql_dump'); ?>
 </body>
 </html>

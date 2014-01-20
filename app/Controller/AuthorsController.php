@@ -60,6 +60,7 @@ class AuthorsController extends AppController
 				$this->Session->setFlash('Author was successfully deleted.');
 				return $this->redirect(array('action' => 'index'));
 			}
+			$this->Session->setFlash('Author has been deleted.');
 		}		
 	}
 }
