@@ -1,6 +1,6 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -12,10 +12,11 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video
+{
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -24,150 +25,201 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section
+{
 	display: block;
 }
-body {
+body
+{
 	line-height: 1;
 	font-family: Consolas, monospace;
-	font-size:14px;
+	font-size: 14px;
 }
-ol, ul {
+ol, ul
+{
 	list-style: none;
 }
-blockquote, q {
+blockquote, q
+{
 	quotes: none;
 }
 blockquote:before, blockquote:after,
-q:before, q:after {
+q:before, q:after
+{
 	content: '';
 	content: none;
 }
-table {
+table
+{
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-#header, #content, #footer, #navBar {
-	width:80%;
-	margin:auto;
-	padding:1em;
+#header, #content, #footer, #navBar
+{
+	width: 80%;
+	margin: auto;
+	padding: 1em;
 }
-#header {
-	background-color:#aeaeae;	
-	padding:2em;
+#header
+{
+	background-color: #aeaeae;
+	padding: 2em;
 }
-#header h1 {
-	font-size:2em;
-	color:#fff;
+#header h1
+{
+	font-size: 2em;
+	color: #fff;
 	text-align: center;
 }
-#content table {
-	width:96%;
-	margin:auto;
-	border:1px solid #aeaeae;
-	margin-top:1em;
+#content table
+{
+	width: 96%;
+	margin: auto;
+	border: 1px solid #aeaeae;
+	margin-top: 1em;
 }
-#content table th {
-	background-color:#aeaeae;
-	padding:5px;
-	margin:10px 0px;
+#content table th
+{
+	background-color: #aeaeae;
+	padding: 5px;
+	margin: 10px 0px;
 	text-align: left;
-	border-left:1px solid #fff;
+	border-left: 1px solid #fff;
 }
-#content table td {
-	padding:5px 10px;
-	font-family:Consolas, monospace;
-	border:1px solid #aeaeae;
-}
-#content table tr:hover {
-	background-color:#dedede;
-}
-#footer {	
-	margin-top:1.5em;
-	text-align: center;
-	background-color:#aeaeae;
-	height:2em;
-	padding:1em;
-}
-#navBar {
-	text-align:center;
-}
-.topMostMenu li{
-	display: inline-block;		
-}
-.topMostMenu li a{
-	padding:1em;
-	display:block;
+#content table th a
+{
+	display: block;
 	text-decoration: none;
-	color:#fff;
-	width:4em;
-	text-align: center;
-	background-color:#9e9e9e;
-}
-.topMostMenu li a:hover {
-	background-color:#7e7e7e;
-}
-#content h1 {
-	margin:0 0 0.5em 0;
-	font-size:2em;
-}
-.input {
-	margin-top:1em;
-}
-.input label {
-	display: inline-block;
-	width:15em;	
-}
-.input input[type='text'] {
-	padding:0.4em;
-	width:15em;	
-	border:1px solid #aeaeae;
-}
-.input select {
-	padding:0.4em;
-	width:15em;
-}
-.submit {
-	margin-top:1em;
+	color: #fff;
 	
 }
-.submit input[type='submit'] {
-	margin-right:1em;
-	border:1px solid #8e8e8e;
-	padding:0.5em;
-	min-width:5em;
+#content table th a:hover
+{
+	text-decoration: underline;
 }
-.paging {
-	text-align:center;
-	margin-top:1em;	
+#content table tr th .desc {
+	background:url('../img/sort-up.png') center right no-repeat no-repeat;
 }
-.paging .tbNavLinks{	
+#content table tr th .asc {
+	background:url('../img/sort-down.png') center right no-repeat no-repeat;
 }
-.paging .tbNavLinks a {
-	text-decoration:none;
-	color:#0f36f0;	
+#content table td
+{
+	padding: 5px 10px;
+	font-family: Consolas, monospace;
+	border: 1px solid #aeaeae;
 }
-.paging .pagingNums {
-	margin:0 1em 0 1em;
+#content table tr:hover
+{
+	background-color: #dedede;
 }
-.error-message {
-	background-color: red;
-	color: white;
+#footer
+{
+	margin-top: 1em;
+	text-align: center;
+	background-color: #aeaeae;
+	height: 2em;
+	padding: 1em;
+}
+#navBar
+{
+	text-align: center;
+}
+.topMostMenu li
+{
+	display: inline-block;
+}
+.topMostMenu li a
+{
+	padding: 1em;
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	width: 4em;
+	text-align: center;
+	background-color: #9e9e9e;
+}
+.topMostMenu li a:hover
+{
+	background-color: #7e7e7e;
+}
+#content h1
+{
+	margin: 0 0 0.5em 0;
+	font-size: 2em;
+}
+.input
+{
+	margin-top: 1em;
+}
+.input label
+{
+	display: inline-block;
+	width: 15em;
+}
+.input input[type='text']
+{
+	padding: 0.4em;
+	width: 15em;
+	border: 1px solid #aeaeae;
+}
+.input select
+{
+	padding: 0.4em;
+	width: 15em;
+}
+.submit
+{
+	margin-top: 1em;
+
+}
+.submit input[type='submit']
+{
+	margin-right: 1em;
+	border: 1px solid #8e8e8e;
+	padding: 0.5em;
+	min-width: 5em;
+}
+.paging
+{
+	text-align: center;
+	margin-top: 1em;
+}
+.paging .tbNavLinks
+{
+}
+.paging .tbNavLinks a, #header a
+{
+	text-decoration: none;
+	color: #0f36f0;
+}
+.paging .pagingNums
+{
+	margin: 0 1em 0 1em;
+}
+.error-message
+{
+	color: red;
 	padding: 0.5em;
 	display: inline-block;
 	margin-left: 1em;
 }
-#flashMessage {
+#flashMessage
+{
 	background-color: red;
 	color: #fff;
 	padding: 0.7em;
 	margin-bottom: 1em;
 }
-.success {
-	background-color:#367e36;
+.success
+{
+	color: #367e36 !important;
 }
-.active{
-	background-color:#6e6e6e !important;
-	border-right:2px solid #fff;
+.active
+{
+	background-color: #6e6e6e !important;
+}
+#pgTotalRec {
+	margin-top:1em;
 }

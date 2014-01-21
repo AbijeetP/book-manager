@@ -3,7 +3,14 @@ App::uses('AppController', 'Controller');
 
 class BooksController extends AppController
 {
-
+	private $saveSuccess = 'The book has been saved.';
+	private $saveError = 'There was an error while saving the book.';
+	private $deleteSuccess = 'The book was deleted.';
+	private $deleteError = 'There was an error while deleting the book.';
+	private $updateSuccess = 'The book was updated.';
+	private $updateError = 'There was an error while updating the book.';
+	private $invalid = 'Invalid Book.';
+	
 	public $components = array('Paginator');
 
 	public $paginate = array(
@@ -30,10 +37,10 @@ class BooksController extends AppController
 			if($this->Book->Save($this->request->data))
 			{
 				// TODO: Show proper erorr colors
-				$this->Session->setFlash(__('The book has been saved.'),'default', array('class' => 'success'));
+				$this->Session->setFlash(__($this->saveSuccess),'default', array('class' => 'success'));
 				return $this->redirect(array('action'=> 'index'));
 			}
-			$this->Session->setFlash(__('The book could not be saved.'));
+			$this->Session->setFlash(__($this->saveError));
 		}
 		$authors = $this->Book->Author->find('list');
 		$genres  = $this->Book->Genre->find('list');
@@ -45,14 +52,14 @@ class BooksController extends AppController
 	function edit($id = null)
 	{
 		if(!$id){
-			throw new NotFoundException(__('Invalid Book'));
+			throw new NotFoundException(__($this->invalid));
 		}
 
 		$book = $this->Book->findById($id);
 
 		if(!$book)
 		{
-			throw new NotFoundException(__('Invalid Book'));
+			throw new NotFoundException(__($this->invalid));
 		}
 
 		if($this->request->is(array('post', 'put')))
@@ -60,10 +67,10 @@ class BooksController extends AppController
 			$this->Book->id = $id;
 			if($this->Book->save($this->request->data))
 			{
-				$this->Session->setFlash(__('Book was updated'),'default', array('class' => 'success'));
+				$this->Session->setFlash(__($this->updateSuccess),'default', array('class' => 'success'));
 				return $this->redirect(array('action'=>'index'));
 			}
-			$this->Session->setFlash(__('Unable to update the book'));
+			$this->Session->setFlash(__($this->updateError));
 		}
 		$this->request->data = $book;
 		$authors = $this->Book->Author->find('list');
@@ -81,10 +88,10 @@ class BooksController extends AppController
 		}
 		if($this->Book->delete($id))
 		{
-			$this->Session->setFlash(__('Book was successfully deleted.'),'default', array('class' => 'success'));
+			$this->Session->setFlash(__($this->deleteSuccess),'default', array('class' => 'success'));
 			return $this->redirect(array('action'=> 'index'));
 		}
-		$this->Session->setFlash('There was an error while deleting the book.');
+		$this->Session->setFlash($this->deleteError);
 	}
 }
 ?>

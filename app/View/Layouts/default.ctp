@@ -37,7 +37,7 @@
 	</head>
 	<body>
 		<div id='header'>
-			<h1><?php echo $pageTitle; ?></h1>
+			<h1><?php echo $this->Html->link($pageTitle, array('controller' => 'books', 'action' => 'index', 'home')); ?></h1>
 		</div>
 		<div id='navBar'>
 			<?php echo $this->element('mainMenu') ?>

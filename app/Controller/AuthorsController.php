@@ -34,7 +34,7 @@ class AuthorsController extends AppController
 		if($this->request->is(array('post', 'put'))) {
 			$this->Author->id = $id;
 			if($this->Author->save($this->request->data)) {
-				$this->Session->setFlash(__('Author was updated'));
+				$this->Session->setFlash(__('Author was updated'), 'default', array('class' => 'success'));
 				return $this->redirect(array('action'=>'index'));
 			}
 			$this->Session->setFlash(__('The author could not be updated.'));

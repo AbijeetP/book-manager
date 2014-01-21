@@ -36,6 +36,4 @@ define('NAME_LENGTH_MSG', 'Name has to be between 3 and 79 characters.');
 define('NOT_EMPTY', 'This field cannot be empty.');
 
 class AppModel extends Model {
-	public $nameMinLimit = 6;
-	public $nameMaxLimit = 79;
 }

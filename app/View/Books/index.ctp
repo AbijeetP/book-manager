@@ -5,9 +5,9 @@
 );?>
 <table>
 	<tr>
-		<th>Name</th>
-		<th>Author</th>
-		<th>Thriller</th>
+		<th><?php echo $this->Paginator->sort('Book.name','Name') ?></th>
+		<th><?php echo $this->Paginator->sort('Author.name','Author') ?></th>
+		<th><?php echo $this->Paginator->sort('Genre.name','Genre') ?></th>
 		<th></th>
 		<th></th>
 	</tr>
@@ -33,5 +33,12 @@
 	<span class='pagingNums'>
 	<?php echo $this->Paginator->numbers(); ?>
 	</span>
-	<?php echo $this->Paginator->next(__('Next') . ' >>',  array('class' => 'tbNavLinks'));?>		
+	<?php echo $this->Paginator->next(__('Next') . ' >>',  array('class' => 'tbNavLinks'));?>
+	<div id='pgTotalRec'>
+		<?php 
+			echo $this->Paginator->counter(array(
+				'format' => __('Total Books: {:count}')
+				));
+		?>
+	</div>	
 </div>

@@ -34,6 +34,7 @@ class GenresController extends AppController {
 			}
 			$this->Session->setFlash(__('The genre could not be updated.'));
 		}
+		$this->request->data = $genre;
 	}
 
 	public function delete($id=null) {
