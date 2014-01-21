@@ -10,10 +10,11 @@ class Author extends AppModel {
 	);
 	
 	public $validate = array(
-		'name' => array(
-			'rule' => 'notEmpty',
+		
+		'name' =>  array( 
+			'rule' => array('between', NAME_MIN, NAME_MAX),
 			'required' => true,
-			'message' => 'This field is mandatory.'
+			'message' => NAME_LENGTH_MSG		
 		)
 	);
 	

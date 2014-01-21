@@ -4,7 +4,6 @@ echo $this->Html->link(
 	'Add Genre',
 	array('controller' => 'genres', 'action' => 'add')
 );?>
-<?php echo $this->Session->flash(); ?>
 <table>
 	<tr>
 		<th>Name</th>

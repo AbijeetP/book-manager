@@ -11,7 +11,7 @@ class GenresController extends AppController {
 			$this->Genre->create();
 			if($this->Genre->Save($this->request->data)) {
 				// TODO: Show proper erorr colors
-				$this->Session->setFlash(__('The genre has been saved.','flash_success'));
+				$this->Session->setFlash(__('The genre has been saved.'),'default', array('class' => 'success'));
 				return $this->redirect(array('action' => 'index'));
 			}
 			$this->Session->setFlash(__('The genre could not be saved.', 'flash_error'));
@@ -29,10 +29,10 @@ class GenresController extends AppController {
 		if($this->request->is(array('post', 'put'))) {
 			$this->Genre->id = $id;
 			if($this->Genre->save($this->request->data)) {
-				$this->Session->setFlash('Author was updated');
+				$this->Session->setFlash(__('Genre was updated'),'default', array('class' => 'success'));
 				return $this->redirect(array('action'=>'index'));
 			}
-			$this->Session->setFlash(__('Unable to update the post'));
+			$this->Session->setFlash(__('The genre could not be updated.'));
 		}
 	}
 
@@ -41,15 +41,15 @@ class GenresController extends AppController {
 			throw new MethodNotAllowedException();
 		}
 		
-		if($this->Genre->hasBooks()) {
-			$this->Session->setFlash('Genre has related books in the database. Please delete those first.');
+		if($this->Genre->hasBooks($id)) {
+			$this->Session->setFlash(__('Genre has related books. Please delete those first.'));
 		}
 		else {
 			if($this->Genre->delete($id)) {
-				$this->Session->setFlash('Genre was successfully deleted.');				
+				$this->Session->setFlash(__('Genre was successfully deleted.'),'default', array('class' => 'success'));				
 			}
 			else {
-				$this->Session->setFlash('Genre could not be deleted.');
+				$this->Session->setFlash(__('Genre could not be deleted.'));
 			}
 		}
 		return $this->redirect(array('action' => 'index'));

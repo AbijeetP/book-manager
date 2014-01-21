@@ -15,47 +15,41 @@
  * @since         CakePHP(tm) v 0.10.0.1076
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-
-$cakeDescription = __d('cake_dev', 'Book Manager : A small application built using CakePHP');
+	$cakeDescription = __d('cake_dev', 'Book Manager : A simple app using CakePHP');
+	$pageTitle = 'Book Manager : A simple app using CakePHP';
 ?>
 <!DOCTYPE html>
-<html>
-<head>
-	<?php echo $this->Html->charset(); ?>
-	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $title_for_layout; ?>
-	</title>
-	<?php
-		echo $this->Html->meta('icon');
+<html>	
+	<head>
+		<?php echo $this->Html->charset(); ?>
+		<title>
+			<?php echo $pageTitle; ?>			
+		</title>
+		<?php
+			 echo $this->Html->meta('icon');
 
-		echo $this->Html->css('cake.generic');
+			echo $this->Html->css('style');
 
-		echo $this->fetch('meta');
-		echo $this->fetch('css');
-		echo $this->fetch('script');
-	?>
-</head>
-<body>
-	<div id="container">
-		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+			echo $this->fetch('meta');
+			echo $this->fetch('css');
+			echo $this->fetch('script');
+		?>
+	</head>
+	<body>
+		<div id='header'>
+			<h1><?php echo $pageTitle; ?></h1>
 		</div>
-		<div id="content">
-
+		<div id='navBar'>
+			<?php echo $this->element('mainMenu') ?>
+		</div>
+		<div id='content'>
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
 		</div>
-		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
-			?>
+		<div id='footer'>
+			<?php echo $cakeDescription?>
 		</div>
-	</div>
-	<?php //echo $this->element('sql_dump'); ?>
-</body>
+	</body>
 </html>
+

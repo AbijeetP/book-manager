@@ -1,0 +1,173 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: Consolas, monospace;
+	font-size:14px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+#header, #content, #footer, #navBar {
+	width:80%;
+	margin:auto;
+	padding:1em;
+}
+#header {
+	background-color:#aeaeae;	
+	padding:2em;
+}
+#header h1 {
+	font-size:2em;
+	color:#fff;
+	text-align: center;
+}
+#content table {
+	width:96%;
+	margin:auto;
+	border:1px solid #aeaeae;
+	margin-top:1em;
+}
+#content table th {
+	background-color:#aeaeae;
+	padding:5px;
+	margin:10px 0px;
+	text-align: left;
+	border-left:1px solid #fff;
+}
+#content table td {
+	padding:5px 10px;
+	font-family:Consolas, monospace;
+	border:1px solid #aeaeae;
+}
+#content table tr:hover {
+	background-color:#dedede;
+}
+#footer {	
+	margin-top:1.5em;
+	text-align: center;
+	background-color:#aeaeae;
+	height:2em;
+	padding:1em;
+}
+#navBar {
+	text-align:center;
+}
+.topMostMenu li{
+	display: inline-block;		
+}
+.topMostMenu li a{
+	padding:1em;
+	display:block;
+	text-decoration: none;
+	color:#fff;
+	width:4em;
+	text-align: center;
+	background-color:#9e9e9e;
+}
+.topMostMenu li a:hover {
+	background-color:#7e7e7e;
+}
+#content h1 {
+	margin:0 0 0.5em 0;
+	font-size:2em;
+}
+.input {
+	margin-top:1em;
+}
+.input label {
+	display: inline-block;
+	width:15em;	
+}
+.input input[type='text'] {
+	padding:0.4em;
+	width:15em;	
+	border:1px solid #aeaeae;
+}
+.input select {
+	padding:0.4em;
+	width:15em;
+}
+.submit {
+	margin-top:1em;
+	
+}
+.submit input[type='submit'] {
+	margin-right:1em;
+	border:1px solid #8e8e8e;
+	padding:0.5em;
+	min-width:5em;
+}
+.paging {
+	text-align:center;
+	margin-top:1em;	
+}
+.paging .tbNavLinks{	
+}
+.paging .tbNavLinks a {
+	text-decoration:none;
+	color:#0f36f0;	
+}
+.paging .pagingNums {
+	margin:0 1em 0 1em;
+}
+.error-message {
+	background-color: red;
+	color: white;
+	padding: 0.5em;
+	display: inline-block;
+	margin-left: 1em;
+}
+#flashMessage {
+	background-color: red;
+	color: #fff;
+	padding: 0.7em;
+	margin-bottom: 1em;
+}
+.success {
+	background-color:#367e36;
+}
+.active{
+	background-color:#6e6e6e !important;
+	border-right:2px solid #fff;
+}

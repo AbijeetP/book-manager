@@ -29,5 +29,13 @@ App::uses('Model', 'Model');
  *
  * @package       app.Model
  */
+ 
+define('NAME_MIN', 3);
+define('NAME_MAX', 79);
+define('NAME_LENGTH_MSG', 'Name has to be between 3 and 79 characters.');
+define('NOT_EMPTY', 'This field cannot be empty.');
+
 class AppModel extends Model {
+	public $nameMinLimit = 6;
+	public $nameMaxLimit = 79;
 }

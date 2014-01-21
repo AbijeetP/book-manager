@@ -18,6 +18,7 @@
  * @since         CakePHP(tm) v 0.2.9
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+define('GRID_PAGE_LIMIT', 10);
 
 App::uses('Controller', 'Controller');
 
@@ -31,4 +32,5 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+	public $pageLimit = 5;	
 }

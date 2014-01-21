@@ -4,7 +4,6 @@ echo $this->Html->link(
 	'Add Author',
 	array('controller' => 'authors', 'action' => 'add')
 );?>
-<?php echo $this->Session->flash(); ?>
 <table>
 	<tr>
 		<th>Name</th>
